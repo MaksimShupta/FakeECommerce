@@ -2,6 +2,7 @@ import { useState } from "react";
 import CommodityList from "./components/CommodityList";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./index.css";
 
 function App() {
   const [count, setCount] = useState(0);
