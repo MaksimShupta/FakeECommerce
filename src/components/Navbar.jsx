@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   //TODO: add logic
@@ -6,6 +7,9 @@ const Navbar = () => {
     <>
       <nav className="bg-gray-800 text-white shadow-md">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+          <Link to="/" className="text-lg font-bold">
+            Home
+          </Link>
           <form className="hidden md:flex flex-grow justify-center mx-8">
             <div className="relative w-full max-w-md flex">
               <input
@@ -22,6 +26,9 @@ const Navbar = () => {
               </button>
             </div>
           </form>
+          <Link to="/cart" className="text-lg">
+            Cart
+          </Link>
         </div>
       </nav>
     </>
