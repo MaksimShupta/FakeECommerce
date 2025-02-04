@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CommodityList from "./components/CommodityList";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {

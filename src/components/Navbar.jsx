@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <nav className="bg-gray-800 text-white shadow-md">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <form class="hidden md:flex flex-grow justify-center mx-8">
+          <form className="hidden md:flex flex-grow justify-center mx-8">
             <div className="relative w-full max-w-md flex">
               <input
                 id="search-bar"
@@ -27,3 +27,5 @@ const Navbar = () => {
     </>
   );
 };
+
+export default Navbar;
