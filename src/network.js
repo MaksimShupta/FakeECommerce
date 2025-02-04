@@ -1,16 +1,29 @@
 export const apiConfig = {
-  tmdbBaseUrl: "https://fakestoreapi.com/products/",
+  goods: "https://fakestoreapi.com/products/",
   imageBaseUrl: "https://fakestoreapi.com/products/image/",
+  categoryList: "https://fakestoreapi.com/products/categories",
 };
 
 export const fetchGoods = async () => {
   try {
-    const res = await fetch(apiConfig.tmdbBaseUrl);
+    const res = await fetch(apiConfig.goods);
     if (!res.ok) {
       throw new Error(`${res.status}. Something went wrong`);
     }
     const data = await res.json();
-    //console.log("Network: ", data);
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const getCategories = async () => {
+  try {
+    const res = await fetch(apiConfig.categoryList);
+    if (!res.ok) {
+      throw new Error(`${res.status}. Something went wrong`);
+    }
+    const data = await res.json();
     return data;
   } catch (error) {
     console.error(error);
