@@ -2,8 +2,6 @@ import { getCategories } from "../network";
 import CategoryButton from "./CategoryButton";
 import { useState, useEffect } from "react";
 
-let items;
-
 const Categories = () => {
   const [items, setItems] = useState([]);
 
@@ -11,7 +9,6 @@ const Categories = () => {
     const fetchData = async () => {
       try {
         const lstItems = await getCategories(); // Fetch the data
-        console.log("category list ", lstItems);
         setItems(lstItems); // Update the state with the fetched items
       } catch (error) {
         console.error("Error by fetching categories:", error);
@@ -26,8 +23,8 @@ const Categories = () => {
       id="cat-list"
       className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto px-4"
     >
-      {items.map((item) => (
-        <CategoryButton key={item} />
+      {items.map((item, index) => (
+        <CategoryButton key={index} cat={item} />
       ))}
     </div>
   );
