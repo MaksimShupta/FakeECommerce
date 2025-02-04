@@ -11,7 +11,7 @@ const Navbar = () => {
               <input
                 id="search-bar"
                 type="search"
-                placeholder="Search movies..."
+                placeholder="Search items..."
                 className="w-full px-4 py-2 pl-10 rounded-l-lg text-black focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
               <button
